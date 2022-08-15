@@ -12,8 +12,8 @@
         <div class = menu>
             <ul>
                 <li style = "list-style: none">管理メニュー</li> </style>
-                <li><a href =/input-employee>社員登録画面</li>
-                <li><a href =>社員一覧画面</li>
+                <li><a href ='input-employee'>社員登録画面</li>
+                <li><a href ='list-employee'>社員一覧画面</li>
             </ul>
         </div>
     </body>

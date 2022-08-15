@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\InputEmployeeController;
+use App\Http\Controllers\ListEmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/menu',function(){
-    return view('index');
-});
+Route::get('/menu',[MenuController::class, 'index'])->name('menu');
 
-Route::get('/input-employee',function(){
-    return view('input');
-});
+Route::get('/input-employee',[InputEmployeeController::class,'input'])->name('input-employee');
 
-Route::get('/list-employee',function(){
-    return view('list');
-});
+Route::get('/list-employee',[ListEmployeeController::class,'list'])->name('list-employee');
