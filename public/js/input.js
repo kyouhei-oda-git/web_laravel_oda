@@ -1,24 +1,21 @@
-function checkForm(){
-    
-    //未入力の入力チェック
-    if(document.employee_text.id.value==""){
-        alert("社員IDを入力して下さい。");
-    return false;
-    }else if(document.employee_text.first_name.value=="" || document.employee_text.last_name.value==""){
-        alert("社員名を入力して下さい。");
-    return false;
-    }else if(document.employee_text.mail.value==""){
-        alert("メールアドレスを入力して下さい。");
-    return false;
-    } var flag = false;
-      for(var i=0; i<document.employee_text.s.length;i++){
-            if(document.employee_text.s[i].checked){ 
-            return flag = true;
-        }
-    } if(flag == false){
-        alert("性別を入力してください。");
-        return flag;
-    }else{
-    return true;
+
+var form = document.forms[0],
+    input = document.getElementById('employee_id'),
+    first_name = document.getElementById("first_name"),
+    submit = document.getElementById('submit');
+
+console.log(input);
+console.log(first_name);
+console.log(submit);
+
+input.addEventListener('invalid', function (e) {
+    if (input.validity.valueMissing) {
+        e.target.setCustomValidity("社員IDを入力してください。");
+    } else if (!input.validity.valid) {
+        e.target.setCustomValidity("This is not a valid username");
     }
-}
+    // to avoid the 'sticky' invlaid problem when resuming typing after getting a custom invalid message
+    input.addEventListener('input', function (e) {
+        e.target.setCustomValidity('');
+    });
+}, false);

@@ -15,7 +15,7 @@
                 <li>メールアドレス</li>
                 <li>性別</li>
             </ul>
-            <p><a href = menu>メニュー画面に戻る</p>
+            <p><a href = "{{ route('menu') }}">メニュー画面に戻る</p>
         </div>
     </body>
 
