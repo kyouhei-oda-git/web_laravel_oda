@@ -35,13 +35,11 @@
                 <option value="ビジソル">ビジソル</option>
                 </select>
             </p>
-           <p><label>メールアドレス<span>*</span><input type="email" name='mail' id="mail" maxlength= "256" Pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+(\.[a-zA-Z0-9._-]+)+$" placeholder="例）taro_yaz@yaz.co.jp" autofocus required title=""></label></p>
+           <p><label>メールアドレス<span>*</span><input type="email" name='mail' id="mail" maxlength= "256" Pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+([a-zA-Z0-9._-]+)+$" placeholder="例）taro_yaz@yaz.co.jp" autofocus required title=""></label></p>
            
            <label>性別<span>*</span></label>
-           <div id='radio' >
            <label for="r_male">男<input type="radio" id ="r_male" name='gender' value="男" class="genders" required></label>
-           <label for="r_female">女<input type="radio" id="r_female" name='gender' class="genders" value="女" required></label>
-           </div>
+           <label for="r_female">女<input type="radio" id="r_female" name='gender' class="genders" value="女" ></label>
 
            <p class=notnull><span>*</span>必要項目</p>
            <input type="submit" value="登録する" id="submit">

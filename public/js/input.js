@@ -33,13 +33,15 @@ input.addEventListener('invalid', function (e) {
     // 入力時のチェック
     input.addEventListener('input', function (e) {
         e.target.setCustomValidity('');
-        if (input.validity.tooShort) {
+        /*if (input.validity.valueMissing) {
+            e.target.setCustomValidity("社員IDを入力してください");
+        } else if (input.validity.tooShort) {
             e.target.setCustomValidity("社員IDは10文字で入力してください");
         } else if (input.validity.tooLong) {
             e.target.setCustomValidity("社員IDは10文字で入力してください");
         } else if (input.validity.patternMismatch) {
             e.target.setCustomValidity("社員IDを正しく入力してください");
-        }
+        }*/
 
     });
 }, false);
@@ -54,9 +56,9 @@ first_name.addEventListener('invalid', function (e) {
     // 入力時のチェック
     first_name.addEventListener('input', function (e) {
         e.target.setCustomValidity('');
-        if (first_name.validity.tooLong) {
+        /*if (first_name.validity.tooLong) {
             e.target.setCustomValidity("社員名は25文字以内で入力してください");
-        }
+        }*/
     });
 }, false);
 
@@ -69,9 +71,9 @@ last_name.addEventListener('invalid', function (e) {
     // 入力時のチェック
     last_name.addEventListener('input', function (e) {
         e.target.setCustomValidity('');
-        if (last_name.validity.tooLong) {
+        /*if (last_name.validity.tooLong) {
             e.target.setCustomValidity("社員名は25文字以内で入力してください");
-        }
+        }*/
     });
 }, false);
 
@@ -97,9 +99,9 @@ mail.addEventListener('invalid', function (e) {
     //メールアドレスの入力時チェック
     mail.addEventListener('input', function (e) {
         e.target.setCustomValidity('');
-        if (mail.validity.patternMismatch) {
+        /*if (mail.validity.patternMismatch) {
             e.target.setCustomValidity("メールアドレスを正しく入力してください");
-        }
+        }*/
     });
 }, false);
 
@@ -112,6 +114,7 @@ mail.addEventListener('invalid', function (e) {
         }
     }, false);
 }*/
+//性別のチェック
 genders.forEach(function (gender) {
     gender.addEventListener('invalid', function (e) {
         e.target.setCustomValidity('');
