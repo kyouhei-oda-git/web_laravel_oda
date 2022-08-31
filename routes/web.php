@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 //トップページに遷移
-Route::get('/menu',[MenuController::class, 'index'])->name('menu');
+Route::get('/menu',[MenuController::class,'index'])->name('menu');
 
 //登録画面に遷移
 Route::get('/input-employee',[InputEmployeeController::class,'input'])->name('input-employee');

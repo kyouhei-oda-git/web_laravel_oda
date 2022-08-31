@@ -30,16 +30,16 @@
                 <p>所属セクション<span>*</span>
                 <select name = 'department_list' id="department_list" autofocus required title="">
                 <option value="">選択してください</option>
-                <option value="シス開">シス開</option>
-                <option value="グロカル">グロカル</option>
-                <option value="ビジソル">ビジソル</option>
+                <option value="1">シス開</option>
+                <option value="2">グロカル</option>
+                <option value="3">ビジソル</option>
                 </select>
             </p>
            <p><label>メールアドレス<span>*</span><input type="email" name='mail' id="mail" maxlength= "256" Pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+([a-zA-Z0-9._-]+)+$" placeholder="例）taro_yaz@yaz.co.jp" autofocus required title=""></label></p>
            
            <label>性別<span>*</span></label>
-           <label for="r_male">男<input type="radio" id ="r_male" name='gender' value="男" class="genders" required></label>
-           <label for="r_female">女<input type="radio" id="r_female" name='gender' class="genders" value="女" ></label>
+           <label for="r_male">男<input type="radio" id ="r_male" name='gender' value="1" class="genders" required></label>
+           <label for="r_female">女<input type="radio" id="r_female" name='gender' class="genders" value="2" ></label>
 
            <p class=notnull><span>*</span>必要項目</p>
            <input type="submit" value="登録する" id="submit">
